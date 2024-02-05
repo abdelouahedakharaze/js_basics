@@ -23,14 +23,17 @@
 
     .question-card,
     .answer-card {
-      width: 300px;
+      width: auto; /* Set width to auto for dynamic width */
       padding: 20px;
       margin: 10px; /* Add margin between the cards */
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
       background: linear-gradient(45deg, #3498db, #2ecc71); /* Change the gradient colors */
       color: #fff; /* Change the text color */
-      text-align: center;
+      text-align: left;
+      min-height: 120px; /* Set a minimum height for the cards */
+      overflow: hidden; /* Hide overflow content */
+      box-sizing: border-box; /* Include padding in total width */
     }
 
     h1 {
@@ -78,28 +81,28 @@
 <body>
   <div class="card-container">
     <div class="question-card">
-      <h1>What does the following Python code print?</h1>
-      <code>
-        def add_numbers(a, b):
-            return a + b
-            result = add_numbers("Hello", "World")
-            print(result)
-      </code>
-    </div>
-
-    <div class="answer-card">
-      <label>
-        <input type="radio" name="choice" value="15"> A. HelloWorld
-      </label>
-      <label>
-        <input type="radio" name="choice" value="20"> B. Hello World
-      </label>
-      <label>
-        <input type="radio" name="choice" value="25"> C. TypeError
-      </label>
-      <label>
-        <input type="radio" name="choice" value="2"> D. None
-      </label>
+        <h1>What does the following Python code print?</h1>
+        <code>
+          def add_numbers(a, b):
+              return a + b
+              result = add_numbers("Hello", "World")
+              print(result)
+        </code>
+      </div>
+  
+      <div class="answer-card">
+        <label>
+          <input type="radio" name="choice" value="15"> A. HelloWorld
+        </label>
+        <label>
+          <input type="radio" name="choice" value="20"> B. Hello World
+        </label>
+        <label>
+          <input type="radio" name="choice" value="25"> C. TypeError
+        </label>
+        <label>
+          <input type="radio" name="choice" value="2"> D. None
+        </label>
     </div>
   </div>
 
