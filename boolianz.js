@@ -1,0 +1,11 @@
+let a = true;
+let b = false;
+console.log(a + b);
+console.log(a - b);
+console.log(b - a);
+console.log(a / b);
+console.log(b / a);
+console.log(typeof a);
+console.log("what should realy do ");
+console.log(b && a);
+console.log(b || a);
