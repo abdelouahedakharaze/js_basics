@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><span class="highlight">My</span> Portfolio</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="card profile-card">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/300" alt="Profile picture">
+            </div>
+            <div class="profile-content">
+                <h2>Alex Johnson</h2>
+                <p class="subtitle">Frontend Developer</p>
+                <p>I create beautiful, responsive websites with modern technologies. Passionate about UX/UI design and clean code.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <article class="card project-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive online store built with React and Node.js.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 2" class="project-image">
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather application with 5-day forecast.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>CSS3</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 3" class="project-image">
+                    <div class="project-content">
+                        <h3>Task Manager App</h3>
+                        <p>Productivity application with drag-and-drop functionality.</p>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Sass</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card card">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card card">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card card">
+                    <i class="fas fa-mobile-alt skill-icon"></i>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Webpack</li>
+                        <li>Figma</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="main-footer">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind or want to connect?</p>
+            <a href="mailto:hello@example.com" class="btn btn-large">Contact Me</a>
+            <div class="footer-bottom">
+                <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

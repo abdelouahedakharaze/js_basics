@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz Challenge</title>
+</head>
+<body style="background-color: #f0f7ff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px;">
+
+    <header style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 2.5em;">🔬 Science Quiz Challenge 🔭</h1>
+        <p style="font-style: italic; opacity: 0.9;">Test your knowledge of fundamental science concepts</p>
+    </header>
+
+    <form id="quizForm" style="background-color: white; padding: 30px; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <fieldset style="border: 2px dashed #667eea; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+            <legend style="font-weight: bold; color: #764ba2; font-size: 1.2em;">Personal Information</legend>
+            
+            <label for="name" style="display: block; margin-bottom: 8px; color: #555;">Your Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 15px;">
+            
+            <label for="email" style="display: block; margin-bottom: 8px; color: #555;">Email (optional):</label>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+            
+            <label style="display: block; margin: 15px 0 8px; color: #555;">Education Level:</label>
+            <select name="education" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                <option value="">Select your education level</option>
+                <option value="highschool">High School</option>
+                <option value="college">College</option>
+                <option value="graduate">Graduate</option>
+                <option value="other">Other</option>
+            </select>
+        </fieldset>
+
+        <article class="question" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #4e73df;">
+            <h3 style="color: #4e73df; margin-top: 0;">1. What is the chemical symbol for gold?</h3>
+            <div style="margin-left: 20px;">
+                <input type="radio" id="q1-a" name="q1" value="A" required>
+                <label for="q1-a" style="margin-left: 5px;">Au</label><br>
+                
+                <input type="radio" id="q1-b" name="q1" value="B">
+                <label for="q1-b" style="margin-left: 5px;">Ag</label><br>
+                
+                <input type="radio" id="q1-c" name="q1" value="C">
+                <label for="q1-c" style="margin-left: 5px;">Fe</label><br>
+                
+                <input type="radio" id="q1-d" name="q1" value="D">
+                <label for="q1-d" style="margin-left: 5px;">Go</label>
+            </div>
+        </article>
+
+        <article class="question" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #1cc88a;">
+            <h3 style="color: #1cc88a; margin-top: 0;">2. Which planets are known as gas giants? (Select all that apply)</h3>
+            <div style="margin-left: 20px;">
+                <input type="checkbox" id="q2-a" name="q2" value="A">
+                <label for="q2-a" style="margin-left: 5px;">Jupiter</label><br>
+                
+                <input type="checkbox" id="q2-b" name="q2" value="B">
+                <label for="q2-b" style="margin-left: 5px;">Mars</label><br>
+                
+                <input type="checkbox" id="q2-c" name="q2" value="C">
+                <label for="q2-c" style="margin-left: 5px;">Saturn</label><br>
+                
+                <input type="checkbox" id="q2-d" name="q2" value="D">
+                <label for="q2-d" style="margin-left: 5px;">Neptune</label>
+            </div>
+        </article>
+
+        <article class="question" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #f6c23e;">
+            <h3 style="color: #f6c23e; margin-top: 0;">3. Explain the water cycle in your own words:</h3>
+            <textarea name="q3" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+        </article>
+
+        <article class="question" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #e74a3b;">
+            <h3 style="color: #e74a3b; margin-top: 0;">4. Match the scientists with their discoveries:</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <tr>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;">Marie Curie</td>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+                        <select name="q4-a" style="width: 100%; padding: 5px;">
+                            <option value="">Select discovery</option>
+                            <option value="radioactivity">Radioactivity</option>
+                            <option value="relativity">Theory of Relativity</option>
+                            <option value="evolution">Theory of Evolution</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;">Charles Darwin</td>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+                        <select name="q4-b" style="width: 100%; padding: 5px;">
+                            <option value="">Select discovery</option>
+                            <option value="radioactivity">Radioactivity</option>
+                            <option value="relativity">Theory of Relativity</option>
+                            <option value="evolution">Theory of Evolution</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Albert Einstein</td>
+                    <td style="padding: 8px;">
+                        <select name="q4-c" style="width: 100%; padding: 5px;">
+                            <option value="">Select discovery</option>
+                            <option value="radioactivity">Radioactivity</option>
+                            <option value="relativity">Theory of Relativity</option>
+                            <option value="evolution">Theory of Evolution</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">Submit Quiz</button>
+            <button type="reset" style="background-color: #e74a3b; color: white; border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 50px; cursor: pointer; margin-left: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">Reset Answers</button>
+        </div>
+    </form>
+
+    <aside style="background-color: #e2e3e5; padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 5px solid #6c757d;">
+        <h3 style="color: #6c757d; margin-top: 0;">📚 Science Resources</h3>
+        <ul style="padding-left: 20px;">
+            <li><a href="#" style="color: #4e73df; text-decoration: none;">Periodic Table Reference</a></li>
+            <li><a href="#" style="color: #4e73df; text-decoration: none;">Astronomy Basics</a></li>
+            <li><a href="#" style="color: #4e73df; text-decoration: none;">Biology Fundamentals</a></li>
+        </ul>
+    </aside>
+
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #6c757d; font-size: 0.9em;">
+        <p>© 2023 Science Education Initiative | 
+            <a href="#" style="color: #4e73df; text-decoration: none;">Privacy Policy</a> | 
+            <a href="#" style="color: #4e73df; text-decoration: none;">Terms of Use</a>
+        </p>
+        <progress value="75" max="100" style="width: 200px; height: 10px; margin-top: 10px;"></progress>
+        <p>Website completion: 75%</p>
+    </footer>
+
+</body>
+</html>

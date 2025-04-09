@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruvbox Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Roboto:wght@300;400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>TaskDash</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><i class="icon">📊</i> Dashboard</li>
+                    <li><i class="icon">✅</i> Tasks</li>
+                    <li><i class="icon">⏱️</i> Timer</li>
+                    <li><i class="icon">📅</i> Calendar</li>
+                    <li><i class="icon">📝</i> Notes</li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="avatar" style="background-color: #d3869b;">JD</div>
+                <div class="user-info">
+                    <span class="username">John Developer</span>
+                    <span class="user-status">Active</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="content-header">
+                <h2>Today's Overview</h2>
+                <div class="date-display">Wednesday, March 15</div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card" style="background-color: #fb4934;">
+                    <h3>Overdue</h3>
+                    <div class="stat-value">5</div>
+                    <i class="stat-icon">⚠️</i>
+                </div>
+                
+                <div class="stat-card" style="background-color: #b8bb26;">
+                    <h3>In Progress</h3>
+                    <div class="stat-value">12</div>
+                    <i class="stat-icon">🔄</i>
+                </div>
+                
+                <div class="stat-card" style="background-color: #83a598;">
+                    <h3>Completed</h3>
+                    <div class="stat-value">23</div>
+                    <i class="stat-icon">✅</i>
+                </div>
+                
+                <div class="stat-card" style="background-color: #d3869b;">
+                    <h3>Total</h3>
+                    <div class="stat-value">40</div>
+                    <i class="stat-icon">📊</i>
+                </div>
+            </div>
+
+            <!-- Task Lists -->
+            <div class="task-lists">
+                <!-- Priority Tasks -->
+                <section class="task-column">
+                    <div class="column-header" style="background-color: #fb4934;">
+                        <h3>Priority Tasks</h3>
+                        <span class="task-count">4</span>
+                    </div>
+                    <div class="task-items">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>Fix critical security bug</h4>
+                                <p>Authentication middleware vulnerability</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #cc241d;">Urgent</span>
+                                    <span class="tag" style="background-color: #458588;">Backend</span>
+                                </div>
+                            </div>
+                            <div class="task-due">Today</div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>Client meeting prep</h4>
+                                <p>Prepare slides and demo</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #b16286;">Meeting</span>
+                                </div>
+                            </div>
+                            <div class="task-due">10:30 AM</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- In Progress -->
+                <section class="task-column">
+                    <div class="column-header" style="background-color: #fabd2f;">
+                        <h3>In Progress</h3>
+                        <span class="task-count">6</span>
+                    </div>
+                    <div class="task-items">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>Dashboard redesign</h4>
+                                <p>Implement new UI components</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #98971a;">Frontend</span>
+                                    <span class="tag" style="background-color: #689d6a;">UI/UX</span>
+                                </div>
+                            </div>
+                            <div class="task-due">Mar 17</div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>API documentation</h4>
+                                <p>Write Swagger docs for new endpoints</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #458588;">Backend</span>
+                                    <span class="tag" style="background-color: #b16286;">Docs</span>
+                                </div>
+                            </div>
+                            <div class="task-due">Mar 18</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Completed -->
+                <section class="task-column">
+                    <div class="column-header" style="background-color: #8ec07c;">
+                        <h3>Completed</h3>
+                        <span class="task-count">8</span>
+                    </div>
+                    <div class="task-items">
+                        <div class="task-item completed">
+                            <div class="task-checkbox checked">✓</div>
+                            <div class="task-content">
+                                <h4>Set up CI/CD pipeline</h4>
+                                <p>GitHub Actions workflow</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #076678;">DevOps</span>
+                                </div>
+                            </div>
+                            <div class="task-due">Mar 14</div>
+                        </div>
+                        
+                        <div class="task-item completed">
+                            <div class="task-checkbox checked">✓</div>
+                            <div class="task-content">
+                                <h4>Team standup notes</h4>
+                                <p>Share with stakeholders</p>
+                                <div class="task-tags">
+                                    <span class="tag" style="background-color: #b16286;">Meeting</span>
+                                </div>
+                            </div>
+                            <div class="task-due">Mar 14</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
