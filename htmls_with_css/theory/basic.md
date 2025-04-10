@@ -40,5 +40,3 @@ A simple personal profile page using basic HTML and CSS.
 - Semantic HTML5 structure  
 - Basic CSS styling (colors, spacing)  
 - Responsive units (`max-width`)  
-
----
