@@ -1,12 +1,17 @@
 #!/bin/bash
 
+commit_count=0
+push_count=0
+
 while true; do
     # Get all lines except untracked directories
     status_lines=$(git status --porcelain | grep -v '/$')
 
     # Exit if no actual trackable file changes
     if [ -z "$status_lines" ]; then
-        echo "No more changes to commit."
+        echo "✅ Done!"
+        echo "🔁 Total commits made: $commit_count"
+        echo "📤 Total pushes done:  $push_count"
         exit 0
     fi
 
@@ -18,18 +23,20 @@ while true; do
 
     # Skip deleted files
     if [[ "$status_code" == " D" || "$status_code" == "D " ]]; then
-        echo "Skipping deleted file: $file_path"
+        echo "⏭️  Skipping deleted file: $file_path"
         continue
     fi
 
-    echo "Adding: $file_path"
-    git add "$file_path" || { echo "Add failed. Skipping."; continue; }
+    echo "➕ Adding: $file_path"
+    git add "$file_path" || { echo "⚠️ Add failed. Skipping."; continue; }
 
-    echo "Committing..."
+    echo "📝 Committing..."
     git commit -m "$(basename "$file_path")" || continue
+    ((commit_count++))
 
-    echo "Pushing..."
-    git push || { echo "Push failed. Exiting."; exit 1; }
+    echo "📤 Pushing..."
+    git push || { echo "❌ Push failed. Exiting."; exit 1; }
+    ((push_count++))
 
-    echo "Processed: $file_path"
+    echo "✅ Processed: $file_path"
 done
