@@ -1,28 +1,20 @@
 #!/bin/bash
 
 while true; do
-    # Check if working directory is clean
-    if [ -z "$(git status --porcelain)" ]; then
+    # Get all lines except untracked directories
+    status_lines=$(git status --porcelain | grep -v '/$')
+
+    # Exit if no actual trackable file changes
+    if [ -z "$status_lines" ]; then
         echo "No more changes to commit."
         exit 0
     fi
 
-    # Get first file or folder listed
-    file_line=$(git status --porcelain | head -n1)
-
-    # Get the status and the file path
+    # Get the first actual file
+    file_line=$(echo "$status_lines" | head -n1)
     status_code=$(echo "$file_line" | cut -c1-2)
     file_path=$(echo "$file_line" | cut -c4-)
-
-    # Strip quotes if they exist (from whitespace or directory names)
     file_path=$(echo "$file_path" | sed 's/^"//' | sed 's/"$//')
-
-    # Skip untracked directories (ends with / and is untracked)
-    if [[ "$status_code" == "??" && -d "$file_path" ]]; then
-        echo "Skipping untracked directory: $file_path"
-        # Optional: track files inside it when ready
-        continue
-    fi
 
     # Skip deleted files
     if [[ "$status_code" == " D" || "$status_code" == "D " ]]; then
