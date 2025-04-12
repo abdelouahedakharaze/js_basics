@@ -8,18 +8,43 @@ while true; do
         exit 0
     fi
 
-    # Get the first modified/untracked file path
+    # Get the first uncommitted entry
     file_line=$(git status --porcelain | head -n1)
+    file_status=$(echo "$file_line" | cut -c1-2)
     file_path=$(echo "$file_line" | cut -c4-)
 
-    # Add the file
-    git add "$file_path"
+    # Skip empty lines (safety check)
+    if [ -z "$file_path" ]; then
+        echo "No processable files found."
+        exit 1
+    fi
+
+    # Handle directories
+    if [ -d "$file_path" ]; then
+        # Check if directory contains files (including hidden ones)
+        if [ -z "$(find "$file_path" -mindepth 1 -maxdepth 1 -not -name '.git' -print -quit 2>/dev/null)" ]; then
+            echo "Skipping empty directory: $file_path"
+            git clean -fdq "$file_path"  # Remove empty directory
+            continue
+        fi
+    fi
+
+    # Add the file/directory
+    if ! git add -- "$file_path"; then
+        echo "Failed to add: $file_path"
+        # If it's a directory with ignored files, skip permanently
+        if [ -d "$file_path" ]; then
+            echo "Adding directory to .gitignore"
+            echo "/$file_path" >> .gitignore
+        fi
+        continue
+    fi
 
     # Commit with filename as message
     git commit -m "$(basename "$file_path")"
 
-    # Push to remote
+    # Push changes
     git push
 
-    echo "Processed: $file_path"
+    echo "Successfully processed: $file_path"
 done
