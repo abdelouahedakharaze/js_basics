@@ -1,0 +1,52 @@
+<div>
+  <h2>Create a New Task</h2>
+
+  <!-- Task Title -->
+  <label for="task-title">Task Title</label>
+  <input type="text" id="task-title" name="task-title" placeholder="Enter task title">
+  <br><br>
+
+  <!-- Task Description -->
+  <label for="task-desc">Description</label>
+  <textarea id="task-desc" name="task-desc" placeholder="Enter task description"></textarea>
+  <br><br>
+
+  <!-- Due Date -->
+  <label for="due-date">Due Date</label>
+  <input type="date" id="due-date" name="due-date">
+  <br><br>
+
+  <!-- Priority -->
+  <label for="priority">Priority</label>
+  <select id="priority" name="priority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+  <br><br>
+
+  <!-- Status -->
+  <label>Status</label>
+  <input type="radio" id="todo" name="status" value="todo">
+  <label for="todo">To Do</label>
+
+  <input type="radio" id="inprogress" name="status" value="inprogress">
+  <label for="inprogress">In Progress</label>
+
+  <input type="radio" id="done" name="status" value="done">
+  <label for="done">Done</label>
+  <br><br>
+
+  <!-- Tags -->
+  <label for="tags">Tags (comma separated)</label>
+  <input type="text" id="tags" name="tags" placeholder="e.g. work, urgent">
+  <br><br>
+
+  <!-- Attach File -->
+  <label for="attachment">Attach File</label>
+  <input type="file" id="attachment" name="attachment">
+  <br><br>
+
+  <!-- Submit Button -->
+  <button type="submit">Add Task</button>
+</div>

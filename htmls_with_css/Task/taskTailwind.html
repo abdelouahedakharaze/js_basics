@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#6DE1D2] min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-xl p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-[#F75A5A] mb-6">Create a New Task</h2>
+
+    <!-- Task Title -->
+    <label for="task-title" class="block mb-1 text-[#FFA955] font-semibold">Task Title</label>
+    <input type="text" id="task-title" name="task-title" placeholder="Enter task title"
+           class="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FFD63A]">
+
+    <!-- Task Description -->
+    <label for="task-desc" class="block mb-1 text-[#FFA955] font-semibold">Description</label>
+    <textarea id="task-desc" name="task-desc" placeholder="Enter task description"
+              class="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FFD63A]"></textarea>
+
+    <!-- Due Date -->
+    <label for="due-date" class="block mb-1 text-[#FFA955] font-semibold">Due Date</label>
+    <input type="date" id="due-date" name="due-date"
+           class="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FFD63A]">
+
+    <!-- Priority -->
+    <label for="priority" class="block mb-1 text-[#FFA955] font-semibold">Priority</label>
+    <select id="priority" name="priority"
+            class="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FFD63A]">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <!-- Status -->
+    <span class="block mb-1 text-[#FFA955] font-semibold">Status</span>
+    <div class="mb-4 space-x-4">
+      <label class="text-gray-700"><input type="radio" name="status" value="todo" class="mr-1">To Do</label>
+      <label class="text-gray-700"><input type="radio" name="status" value="inprogress" class="mr-1">In Progress</label>
+      <label class="text-gray-700"><input type="radio" name="status" value="done" class="mr-1">Done</label>
+    </div>
+
+    <!-- Tags -->
+    <label for="tags" class="block mb-1 text-[#FFA955] font-semibold">Tags (comma separated)</label>
+    <input type="text" id="tags" name="tags" placeholder="e.g. work, urgent"
+           class="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FFD63A]">
+
+    <!-- Attach File -->
+    <label for="attachment" class="block mb-1 text-[#FFA955] font-semibold">Attach File</label>
+    <input type="file" id="attachment" name="attachment" class="mb-4">
+
+    <!-- Submit Button -->
+    <button type="submit"
+            class="w-full py-2 px-4 bg-[#F75A5A] text-white font-bold rounded hover:bg-[#e24b4b] transition">
+      Add Task
+    </button>
+  </div>
+
+</body>
+</html>

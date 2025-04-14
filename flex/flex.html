@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Item Cards</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <section id="flex" class="album">
+    <div class="card">
+      <img src="images/diamond_sword.png" alt="Diamond Sword">
+      <h3>Diamond Sword</h3>
+      <p>A powerful melee weapon with high durability and damage.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/enchanted_book.png" alt="Enchanted Book">
+      <h3>Enchanted Book</h3>
+      <p>Used to apply enchantments to gear using an anvil.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/ender_pearl.png" alt="Ender Pearl">
+      <h3>Ender Pearl</h3>
+      <p>Teleport to the spot where the pearl lands—watch your fall damage!</p>
+    </div>
+
+    <div class="card">
+      <img src="images/golden_apple.png" alt="Golden Apple">
+      <h3>Golden Apple</h3>
+      <p>Restores health and gives buffs—perfect in a tight spot.</p>
+    </div>
+  </section>
+  <hr>
+    <div id="hotbar" class="hotbar">
+      <h1> Inventory </h1>
+      <div class="hotbar-slot">
+        <img src="images/diamond_pickaxe.png" alt="Diamond Pickaxe">
+        <h2>diamond_pickaxe</h2>
+      </div>
+      <div class="hotbar-slot">
+        <img src="images/torch.png" alt="Torch">
+        <h2>torch</h2>
+      </div>
+      <div class="hotbar-slot">
+        <img src="images/cooked_meat.png" alt="Steak">
+        <h2>cooked_meat</h2>
+      </div>
+      <div class="hotbar-slot">
+        <img src="images/bow.png" alt="Bow">
+        <h2>bow</h2>
+      </div>
+      <div class="hotbar-slot">
+        <img src="images/arrow.png" alt="Arrow">
+        <h2>arrow</h2>
+      </div>
+    </div>
+    
+    <!-- Crafting grid -->
+    <div id="crafting" class="crafting">
+      <h4>Crafting Table</h4>
+      <div class="grid">
+        <div class="grid-slot"><img src="images/planks.png" alt="Wood Plank"></div>
+        <h2> + </h2>
+        <div class="grid-slot"><img src="images/planks.png" alt="Wood Planks"></div>
+        <h2> + </h2>
+        <div class="grid-slot"><img src="images/stick.png" alt="Stick"></div>
+        <h2> = </h2>
+      </div>
+      <div class="result-slot">
+        <img src="images/wooden_sword.png" alt="Wooden Sword">
+      </div>
+    </div>
+    
+    <!-- Status effects -->
+    <div id="status-effects" class="flex-item effects">
+      <h4>Active Effects</h4>
+      <div class="effect">
+        <img src="images/strength.png" alt="Strength">
+        <span>Strength II (3:45)</span>
+      </div>
+      <div class="effect">
+        <img src="images/speed.png" alt="Speed">
+        <span>Speed I (1:30)</span>
+      </div>
+      <div class="effect">
+        <img src="images/regeneration.png" alt="Regeneration">
+        <span>Regen (0:22)</span>
+      </div>
+    </div>
+    
+    <!-- XP bar -->
+    <div id="xp-bar" class="flex-item xp-display">
+      <div class="xp-level">Lvl 27</div>
+      <div class="xp-progress">
+        <div class="xp-fill" style="width: 68%"></div>
+      </div>
+      <div class="xp-text">68% to next level</div>
+    </div>
+  </section>
+
+</body>
+</html>
