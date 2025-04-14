@@ -1,0 +1,50 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    border: solid 1px blue;
+
+}
+
+.myCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 9px 2px black;
+    margin: 20px;
+    padding: 20px;;
+
+}
+.letter{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    box-shadow: #603db4 1px 1px 5px;
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+
+}
+.life{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    box-shadow: #e06d08 -3px -1px 1px;
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    color: #333;
+    text-shadow: #1f1b8f 2px 2px 7px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+.container {
+    border: solid 1px orangered;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
