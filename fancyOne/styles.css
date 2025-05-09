@@ -1,0 +1,65 @@
+body{
+  font-family:"Ubuntu Condensed";
+  background-color: bisque;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.title{
+  text-align: center;
+  font-size: 5rem;
+ 
+}
+.logo{
+  font-family: "Unbounded";
+  font-size: small;
+}
+.rubriques{
+  font-family: "Ubuntu Condensed";
+  font-size: medium;
+}
+footer{
+  text-align: center;
+}
+main{
+  display: flex;
+
+}
+.left-section{
+  width: 10%;
+  border-right: 10px solid rgb(132, 104, 26);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  /* writing-mode: vertical-rl; */
+}
+.middle-section{
+  width: 60%;
+  margin-right: 30px;
+  margin-left: 20px;
+
+}
+.right-section{
+  border-left: 10px rgb(132, 104, 26) solid;
+  margin-top: 30px;
+  padding: 20px;
+  
+  
+}
+.middle-section img {
+  height: 600px;
+  width: 400px;
+}
+.right-section img {
+  height: 170px;
+  width: 100px;
+
+}
+.card-volume{
+  box-shadow: 3px 3px 3px saddlebrown;
+  font-size: larger;
+  
+}
