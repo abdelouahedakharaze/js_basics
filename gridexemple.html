@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Grid Gallery</title>
+    <style>
+        /* Basic reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        /* Section 1: Simple Equal Columns Grid */
+        .grid-section-1 {
+            margin-bottom: 40px;
+        }
+        
+        .simple-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        /* Section 2: Grid with Different Sized Items */
+        .grid-section-2 {
+            margin-bottom: 40px;
+        }
+        
+        .varied-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .varied-grid .wide {
+            grid-column: span 2;
+        }
+        
+        .varied-grid .tall {
+            grid-row: span 2;
+        }
+        
+        /* Section 3: Grid with Named Areas */
+        .grid-section-3 {
+            margin-bottom: 40px;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
+            gap: 15px;
+            grid-template-areas:
+                "header header"
+                "flower animal"
+                "tree animal";
+        }
+        
+        .areas-grid .header {
+            grid-area: header;
+            background-color: #e0f7fa;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .areas-grid .flower {
+            grid-area: flower;
+        }
+        
+        .areas-grid .tree {
+            grid-area: tree;
+        }
+        
+        .areas-grid .animal {
+            grid-area: animal;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .simple-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .varied-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .varied-grid .wide {
+                grid-column: span 1;
+            }
+            
+            .areas-grid {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "flower"
+                    "tree"
+                    "animal";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Nature's Grid Gallery</h1>
+    
+    <!-- Section 1: Simple Equal Columns Grid -->
+    <section class="grid-section-1">
+        <h2>Simple Three Column Grid</h2>
+        <div class="simple-grid">
+            <div class="grid-item">
+                <img src="flower1.jpg" alt="Beautiful flower">
+            </div>
+            <div class="grid-item">
+                <img src="bird1.jpg" alt="Colorful bird">
+            </div>
+            <div class="grid-item">
+                <img src="tree1.jpg" alt="Tall tree">
+            </div>
+            <div class="grid-item">
+                <img src="butterfly.jpg" alt="Butterfly on leaf">
+            </div>
+            <div class="grid-item">
+                <img src="forest.jpg" alt="Forest landscape">
+            </div>
+            <div class="grid-item">
+                <img src="deer.jpg" alt="Deer in nature">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: Grid with Different Sized Items -->
+    <section class="grid-section-2">
+        <h2>Grid with Varied Item Sizes</h2>
+        <div class="varied-grid">
+            <div class="grid-item">
+                <img src="flower2.jpg" alt="Red flower">
+            </div>
+            <div class="grid-item wide">
+                <img src="waterfall.jpg" alt="Waterfall in forest">
+            </div>
+            <div class="grid-item tall">
+                <img src="eagle.jpg" alt="Eagle flying">
+            </div>
+            <div class="grid-item">
+                <img src="mushroom.jpg" alt="Forest mushrooms">
+            </div>
+            <div class="grid-item">
+                <img src="fox.jpg" alt="Fox in snow">
+            </div>
+            <div class="grid-item">
+                <img src="sunset.jpg" alt="Sunset over lake">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 3: Grid with Named Areas -->
+    <section class="grid-section-3">
+        <h2>Grid with Named Areas</h2>
+        <div class="areas-grid">
+            <div class="header">
+                <h3>Nature's Highlights</h3>
+                <p>A showcase of beautiful flora and fauna</p>
+            </div>
+            <div class="flower">
+                <img src="exotic-flower.jpg" alt="Exotic flower">
+            </div>
+            <div class="tree">
+                <img src="ancient-tree.jpg" alt="Ancient tree">
+            </div>
+            <div class="animal">
+                <img src="lion.jpg" alt="Lion in savanna">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
