@@ -67,11 +67,12 @@ nav ul li a {
   text-decoration: none;
   font-size: 1rem;
   font-family: "Poetsen One", sans-serif;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #ffd700;
+  
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -84,7 +85,7 @@ nav ul li a:hover {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
   align-items: start;
 }
@@ -107,7 +108,7 @@ nav ul li a:hover {
 
 .card-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -225,25 +226,32 @@ footer {
 /* ========== THEME STRIPES ========== */
 
 .islamic-theme {
-  border-left: 4px solid #ffd700;
+  border-left: 4px solid #ad9304;
+  border-bottom: 4px solid #ad9304;
+
 }
 
 .egyptian-theme {
-  border-left: 4px solid #d4af37;
+  border-left: 4px solid #725803;
+  border-bottom: 4px solid #725803;
 }
 
 .greek-theme {
-  border-left: 4px solid #e6e6e6;
+  border-left: 4px solid #742323;
+  border-bottom: 4px solid #742323;
 }
 
 .renaissance-theme {
-  border-left: 4px solid #b8860b;
+  border-left: 4px solid #715203;
+  border-bottom: 4px solid #715203;
 }
 
 .chinese-theme {
-  border-left: 4px solid #c0c0c0;
+  border-left: 4px solid #840404;
+  border-bottom: 4px solid #840404;
 }
 
 .japanese-theme {
-  border-left: 4px solid #9d8849;
+  border-left: 4px solid #684f03;
+  border-bottom: 4px solid #684f03;
 }
